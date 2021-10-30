@@ -1,0 +1,56 @@
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<canvas id="canvas1"></canvas>
+<script>
+
+    canvas=document.getElementById("canvas1");
+    document.addEventListener("mousedown", render_new_game);
+    ctx=canvas.getContext("2d");
+    ctx.canvas.height = canvas.width;
+    ctx.canvas.width = canvas.height;
+    // Adding the event listeners
+
+
+    function render_new_game(){
+        ctx.fillStyle = "black"
+        ctx.fillRect(0,0,300,300)
+
+        ctx.fillStyle = "white"
+        ctx.font = "20px Consolas"
+        ctx.fillText("ROB: A INVASÃO V.1.0",20,100)
+
+        ctx.font = "10px Consolas"
+        ctx.fillStyle = "white"
+        ctx.fillText("Clique na tela para começar!",20,130)
+
+        ctx.font = "8px Consolas"
+        ctx.fillStyle = "green"
+        ctx.fillText("- INIMIGOS VERDES TEM UMA VIDA E SOMAM 10 PONTOS",20,180)
+
+        ctx.font = "8px Consolas"
+        ctx.fillStyle = "blue"
+        ctx.fillText("- INIMIGOS AZUIS TEM DUAS VIDAS E SOMAM 20 PONTOS",20,200)
+
+        ctx.font = "8px Consolas"
+        ctx.fillStyle = "white"
+        ctx.fillText("MOVIMENTAÇÃO -- DIRECIONAIS DO TECLADO",20,230)
+        ctx.fillText("ATIRAR -- TECLA ESPAÇO",20,250)
+
+    }
+
+    render_new_game()
+
+    document.body.onmousedown = function(){
+        window.location.replace('index.html')
+    }
+
+
+
+
+
+</script>
+<body>
+</body>
+</html>
